@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {   
+    height: 100vh;
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr)  
+    
+    gap: 1px;
+
+
+}
+
+container div {
+    color: red;
+    border: 1px solid black;
+}
+
+.header {
+    grid-column: 2/ 5;
+    grid-row: 1 / 2;
+    background-color: blue;
+}
+
+.sidebar {
+    grid-row: 1 / 6;
+    background-color: #00acee;
+    color: aliceblue;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.sidebar ul {
+    margin-top: 4rem;
+}
+
+.mainContent {
+    background-color: black;
+    grid-column: 2 / 4;
+    grid-row: 2 / 6;
+}
+
+.sideContent {
+    grid-column: 4 / 5;
+    grid-row: 2 / 6;
+    background-color: brown;
+}
+
+.home::before {
+    content: '\f015';
+    font-family: fontAwesome;
+}
+.profile::before {
+    content: '\f007';
+    font-family: fontAwesome;
+}
+.message::before {
+    content: '\f0e0';
+    font-family: fontAwesome; 
+    
+}
+.history::before {
+    content: '\f017';
+    font-family: fontAwesome;
+}
+.task::before {
+    content: '\f0ae';
+    font-family: fontAwesome;
+}
+.comm::before {
+    content: '\e533';
+    font-family: fontAwesome;
+}
+.settings::before {
+    content: '\f013';
+    font-family: fontAwesome;
+}
+.support::before {
+    content: '\f590';
+    font-family: fontAwesome;    
+}
+.privacy::before {
+    content: '\f3ed';
+    font-family: fontAwesome;
+}
+ul span {
+    width: 1rem;
+    padding: 0.5rem;
+}
+
+.navitem {
+    max-width:80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5rem;
+    padding: .2rem;    
+    align-items: center;
+    
+    
+}
+.logo {
+    margin-top: 0.1rem;
+    display: flex;
+    height: 3rem;
+    gap: 1rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    border: 0.5rem solid rgb(254, 253, 255);
+    border-radius: 1em;
+    border-top-right-radius: 5% 10%;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.158);
+
+    
+}
+.logoImg {
+    color: black;
+    width: 2rem;
+  
+
+}
+
+@media (max-width: 600px) {
+    .sidebar h1 {
+        display: none;
+    }
+    .navtext {
+        display: none
+    }
+  }
