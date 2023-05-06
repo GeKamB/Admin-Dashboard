@@ -15,12 +15,9 @@ body {
 }
 
 .container {
-    width: 100vw;   
-    height: 100vh;
     display: grid;
     grid-template-columns: max-content 1fr 3fr 1fr ;
-    grid-template-rows: repeat(6, 1fr)  
-    
+    grid-template-rows: repeat(6, 1fr);   
     gap: 1px;
 
 
@@ -48,6 +45,9 @@ container div {
     
     
     
+}
+.header img {
+    height: 5rem;
 }
 object {
     background-color: white;
@@ -195,8 +195,8 @@ ul span {
     
 }
 .logoImg {
-    color: black;
-    width: 2rem;
+    
+    
   
 
 }
@@ -253,9 +253,10 @@ ul span {
 }
 .navHeader {
     margin-right: 5rem;
-    width: 30%;
+    
     justify-self: center;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
     justify-content: space-around;
     
     justify-self: right;
