@@ -7,16 +7,18 @@ body {
     width: 100%;
     height: 100%;
     background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .sidebar a {
     text-decoration: none;
     color: inherit;
 }
 
-.container {   
+.container {
+    width: 100vw;   
     height: 100vh;
     display: grid;
-    grid-template-columns: max-content 1fr 1fr 1fr;
+    grid-template-columns: max-content 1fr 3fr 1fr ;
     grid-template-rows: repeat(6, 1fr)  
     
     gap: 1px;
@@ -29,13 +31,31 @@ container div {
     border: 1px solid black;
 }
 
-.header {
+.header {    
+    width: 98%;
     grid-column: 2/ 5;
     grid-row: 1 / 2;
-    background-color: blue;
+    background-color: 	#EDEADE;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2rem;
+    padding: 1rem 2rem;
+    margin-bottom: 4px;
+    box-shadow: 0 8px 6px -6px black;
+    flex: 1;  
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
+    
+}
+object {
+    background-color: white;
+    cursor: pointer;
 }
 
 .sidebar {
+    
     grid-row: 1 / 6;
     background-color: #00acee;
     color: aliceblue;
@@ -49,15 +69,61 @@ container div {
 }
 
 .mainContent {
-    background-color: black;
+    background-color: #F9F6EE;
     grid-column: 2 / 4;
     grid-row: 2 / 6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 2rem 0.5rem;
 }
+.card {
+    padding: 1rem;
+    background-color: #f5e9bb81;
+    border-radius:10%;
+    text-align: center;
+
+}
+.card p {
+    padding: 0.5rem;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+.card .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 
 .sideContent {
     grid-column: 4 / 5;
     grid-row: 2 / 6;
-    background-color: brown;
+    background-color: #F9F6EE;
+    display: grid;
+    gap: 2rem; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    padding-top: 40%;
+}
+.anon {
+    display: grid;
+    padding: 1rem;
+    text-align: center;
+    
+    
+     
+    
+}
+.anon p {
+    font-size: 0.8rem;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 0.3rem;
+    margin: 0.3rem
+}
+.trendCard {
+    padding: 0.3rem;
+    display: flex;
+    gap: 0.2rem;
 }
 
 .home::before {
@@ -134,11 +200,118 @@ ul span {
 
 }
 
+.svgbutton {
+    background-color: white;
+    width: 1.8rem;
+    border: none;
+    ;
+}
+.svgbutton2 {
+    background-color: #EDEADE;
+}
+.icons button {
+    background-color: #EDEADE;
+}
+
+.searchBox {
+    width: 70%;
+    display:grid;
+    align-items: baseline;
+    margin-top: 1rem;
+    flex-shrink: 3;
+
+}
+.searchForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+}
+.searchForm button {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+    margin-left: 0.7rem;
+    cursor: pointer;
+    
+}
+.searchForm input {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 0;
+    border: 1px solid white;
+    border-radius: 1rem;
+    min-height: 35px;
+    text-align: center;
+    
+
+}
+.userLogo {
+    display: flex;
+    gap: 1rem;
+}
+.navHeader {
+    margin-right: 5rem;
+    width: 30%;
+    justify-self: center;
+    display: grid;
+    justify-content: space-around;
+    
+    justify-self: right;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-end;
+    overflow: hidden;
+}
+.icons {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-self: flex-start;
+    
+    
+
+}
+.icons div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+    
+    
+}
+.navButton {
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    align-self: baseline;
+    background-color: #00acee;
+    color: white;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     .sidebar h1 {
         display: none;
     }
     .navtext {
         display: none
+    }
+    .userLogo {
+        display: none;
+    }
+    .header {
+        display: grid;
+
+    }
+    .sideContent {
+        display: none;
+    }
+    .mainContent {
+        grid-column: 2 / 5;
     }
   }
