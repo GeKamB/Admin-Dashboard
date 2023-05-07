@@ -28,7 +28,7 @@ container div {
 }
 
 .header {    
-    width: 98%;
+    
     grid-column: 2 / 4;
     grid-row: 1 / 2;    
     background-color: 	#EDEADE;
@@ -316,8 +316,13 @@ ul span {
         height:max-content;
 
     }
+    .mainContent {
+        grid-column: 2 / 4;
+        z-index: 1;
+    }
     .sideContent {
-        display: block;
+        display: none;
+        z-index: 0;
     }
  
 
